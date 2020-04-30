@@ -12,8 +12,9 @@
   "scripts": {
     "clean": "rimraf dist/ && rimraf ../ipyleaflet/static",
     "build": "webpack",
-    "prepublish": "npm run clean && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run snyk-protect && npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect"
   },
   "devDependencies": {
     "css-loader": "^0.28.7",
@@ -28,9 +29,11 @@
     "leaflet-draw": "^0.4.10",
     "leaflet.markercluster": "^1.2.0",
     "leaflet-splitmap": "^1.0.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "snyk": "^1.316.1"
   },
   "jupyterlab": {
     "extension": "src/jupyterlab-plugin"
-  }
+  },
+  "snyk": true
 }
