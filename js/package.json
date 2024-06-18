@@ -23,7 +23,7 @@
     "webpack": "^3.5.5"
   },
   "dependencies": {
-    "@jupyter-widgets/base": "^1.1",
+    "@jupyter-widgets/base": "^1.2.1",
     "leaflet": "^1.2.0",
     "leaflet-draw": "^0.4.10",
     "leaflet.markercluster": "^1.2.0",
